@@ -1,8 +1,10 @@
-import { ImageListItem } from '@mui/material';
+import { Fab, ImageListItem } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
+import { ScrollToTop } from './ScrollToTop';
+import { KeyboardArrowUp } from '@mui/icons-material';
 
 export const PhotoGrid = ({
 	imageUrls,
@@ -40,6 +42,11 @@ export const PhotoGrid = ({
 					</ImageListItem>
 				))}
 			</ImageList>
+			<ScrollToTop>
+				<Fab aria-label='scroll-to-top' color='primary'>
+					<KeyboardArrowUp />
+				</Fab>
+			</ScrollToTop>
 		</div>
 	);
 };
