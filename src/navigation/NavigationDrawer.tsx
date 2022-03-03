@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-// import Drawer from '@mui/material/Drawer';
 // import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 // import Divider from '@mui/material/Divider';
@@ -36,7 +35,8 @@ export const NavigationDrawer = ({
 			onOpen={() => setNavOpen(true)}
 		>
 			<DrawerHeader>
-				<IconButton edge='end' onClick={() => setNavOpen(false)}>
+				<Box flexGrow={1}></Box>
+				<IconButton edge='start' onClick={() => setNavOpen(false)}>
 					<CloseIcon />
 				</IconButton>
 			</DrawerHeader>
