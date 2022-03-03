@@ -9,17 +9,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { FullPagePhoto } from './photo-grid/FullPagePhoto';
 import { albumUrl, homeUrl, photoUrl } from './utils/urls';
-import { useAlbums } from './albums/useAlbums';
-import { Albums } from './albums/constants/albums';
 
 export const App = () => {
 	const [navIsOpen, setNavOpen] = useState(false);
-	//TODO Alex, this line below returns false then true immediately after.
-	//It would be nice if it could just return the proper value immediately.
-	//That way dark mode would be remembered.
-	const defaultToDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+	const defaultToDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+		noSsr: true,
+	});
 	const [isInDarkMode, setDarkMode] = useState(defaultToDarkMode);
-	const albums = useAlbums() as Albums;
 
 	const theme = useMemo(
 		() =>
