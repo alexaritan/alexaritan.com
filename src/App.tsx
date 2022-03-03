@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import { NavigationBar } from './navigation/NavigationBar';
 import { NavigationDrawer } from './navigation/NavigationDrawer';
 import { Home } from './Home';
 import { PhotoGrid } from './photo-grid/PhotoGrid';
-import { useMediaQuery } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import { FullPagePhoto } from './photo-grid/FullPagePhoto';
 import { albumUrl, homeUrl, photoUrl } from './utils/urls';
 

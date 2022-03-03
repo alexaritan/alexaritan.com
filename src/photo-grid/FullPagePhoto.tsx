@@ -6,11 +6,11 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { useSwipeable } from 'react-swipeable';
 import { albumUrl } from '../utils/urls';
-import { useAlbums } from '../albums/useAlbums';
+import { useAlbums } from '../albums/hooks/useAlbums';
 import { useKeyPress } from '../utils/hooks/useKeyPress';
 import { Album } from '../albums/constants/albums';
-import { useSwipeable } from 'react-swipeable';
 
 export const FullPagePhoto = () => {
 	//Parse out URL contents to prepare navigation.
