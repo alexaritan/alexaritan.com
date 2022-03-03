@@ -10,6 +10,7 @@ import { albumUrl } from '../utils/urls';
 import { useAlbums } from '../albums/useAlbums';
 import { useKeyPress } from '../utils/hooks/useKeyPress';
 import { Album } from '../albums/constants/albums';
+import { useSwipeable } from 'react-swipeable';
 
 export const FullPagePhoto = () => {
 	//Parse out URL contents to prepare navigation.
@@ -47,8 +48,16 @@ export const FullPagePhoto = () => {
 	useKeyPress({ onKeyPress: handlePrevious, targetKey: 'ArrowLeft' });
 	useKeyPress({ onKeyPress: handleNext, targetKey: 'ArrowRight' });
 
+	// Make the images swipeable on mobile.
+	const swipeHandlers = useSwipeable({
+		onSwipedDown: handleClose,
+		onSwipedLeft: handleNext,
+		onSwipedRight: handlePrevious,
+		preventDefaultTouchmoveEvent: true,
+	});
+
 	return (
-		<Dialog fullScreen open={true}>
+		<Dialog fullScreen open={true} {...swipeHandlers}>
 			{shouldRenderNavIcons ? (
 				<IconButton
 					edge='start'
