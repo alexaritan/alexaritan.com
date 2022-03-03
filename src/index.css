@@ -23,6 +23,11 @@ a:visited {
 	color: inherit;
 }
 
+/* For some reason the headers have a few pixels of space on their left. Let's fix that. */
+h2 {
+	margin-left: -4px !important;
+}
+
 .photoGrid {
 	margin: auto;
 }

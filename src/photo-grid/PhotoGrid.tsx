@@ -2,12 +2,15 @@ import { ImageListItem } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Typography from '@mui/material/Typography';
 
 export const PhotoGrid = ({
 	imageUrls,
+	subtitle,
 	title,
 }: {
 	imageUrls: string[];
+	subtitle?: string;
 	title: string;
 }) => {
 	const theme = useTheme();
@@ -17,7 +20,12 @@ export const PhotoGrid = ({
 			className='photoGrid'
 			style={{ width: shouldRenderMultipleColumns ? 1000 : '100%' }}
 		>
-			<h1>{title}</h1>
+			<Typography component='h2' variant='h2'>
+				{title}
+			</Typography>
+			<Typography component='div' variant='subtitle1'>
+				{subtitle}
+			</Typography>
 			<ImageList
 				cols={shouldRenderMultipleColumns ? 3 : 1}
 				rowHeight={shouldRenderMultipleColumns ? 200 : 300}

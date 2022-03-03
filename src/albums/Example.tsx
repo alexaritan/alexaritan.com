@@ -13,6 +13,7 @@ export const Example = () => (
 			'https://i.imgur.com/6kUOwrF.jpg',
 			'https://i.imgur.com/7ZbuWh1.jpg',
 		]}
+		subtitle='Here is an example album'
 		title='Photos'
 	/>
 );
