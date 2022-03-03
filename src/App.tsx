@@ -43,16 +43,8 @@ export const App = () => {
 			<NavigationDrawer navIsOpen={navIsOpen} setNavOpen={setNavOpen} />
 			<Routes>
 				<Route path={homeUrl} element={<Home />} />
-				{Object.keys(albums).map(key => (
-					<Route
-						path={albumUrl({ albumName: key })}
-						element={<Album albumName={key} />}
-					/>
-				))}
-				<Route
-					path={photoUrl({ albumName: 'example' })}
-					element={<FullPagePhoto />}
-				/>
+				<Route path={albumUrl()} element={<Album />} />
+				<Route path={photoUrl()} element={<FullPagePhoto />} />
 			</Routes>
 		</ThemeProvider>
 	);

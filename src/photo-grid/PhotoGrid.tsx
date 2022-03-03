@@ -9,10 +9,12 @@ import { Link } from 'react-router-dom';
 import { photoUrl } from '../utils/urls';
 
 export const PhotoGrid = ({
+	albumName,
 	imageUrls,
 	subtitle,
 	title,
 }: {
+	albumName: string;
 	imageUrls: string[];
 	subtitle?: string;
 	title: string;
@@ -36,7 +38,7 @@ export const PhotoGrid = ({
 				rowHeight={shouldRenderMultipleColumns ? 200 : 300}
 			>
 				{imageUrls.map((url, index) => (
-					<Link to={`${photoUrl({ albumName: 'example' })}?id=${index}`}>
+					<Link to={`${photoUrl({ albumName })}?id=${index}`}>
 						<ImageListItem
 							className='photo'
 							key={`photo${index}`}
