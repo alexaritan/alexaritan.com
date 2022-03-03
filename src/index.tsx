@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { PhotoGrid } from './photo-grid/PhotoGrid.tsx';
+import { PhotoGrid } from './photo-grid/PhotoGrid';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
