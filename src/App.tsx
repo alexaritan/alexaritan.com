@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { NavigationBar } from './navigation/NavigationBar';
 import { NavigationDrawer } from './navigation/NavigationDrawer';
 import { Home } from './Home';
-import { Album } from './albums/Album';
+import { PhotoGrid } from './photo-grid/PhotoGrid';
 import { useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -43,7 +43,7 @@ export const App = () => {
 			<NavigationDrawer navIsOpen={navIsOpen} setNavOpen={setNavOpen} />
 			<Routes>
 				<Route path={homeUrl} element={<Home />} />
-				<Route path={albumUrl()} element={<Album />} />
+				<Route path={albumUrl()} element={<PhotoGrid />} />
 				<Route path={photoUrl()} element={<FullPagePhoto />} />
 			</Routes>
 		</ThemeProvider>
