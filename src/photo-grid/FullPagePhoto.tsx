@@ -11,6 +11,7 @@ export const FullPagePhoto = () => {
 	const [searchParams] = useSearchParams();
 	const src = searchParams.get('src');
 	const { pathname } = useLocation();
+	const albumName = parseAlbumFromUrl({ path: pathname });
 	const navigate = useNavigate();
 
 	//Get info about the theme.
@@ -18,8 +19,7 @@ export const FullPagePhoto = () => {
 	const shouldRenderNavIcons = useMediaQuery(theme.breakpoints.up('sm'));
 
 	const handleClose = useCallback(
-		() =>
-			navigate(albumUrl({ albumName: parseAlbumFromUrl({ path: pathname }) })),
+		() => navigate(albumUrl({ albumName })),
 		[navigate]
 	);
 
