@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 // import Drawer from '@mui/material/Drawer';
@@ -46,9 +47,16 @@ export const NavigationDrawer = ({
 				role='presentation'
 			>
 				<List>
-					<ListItem button>
-						<ListItemText primary='First link' />
-					</ListItem>
+					<Link to='/'>
+						<ListItem button>
+							<ListItemText primary='Home' />
+						</ListItem>
+					</Link>
+					<Link to='/example'>
+						<ListItem button>
+							<ListItemText primary='Example album' />
+						</ListItem>
+					</Link>
 				</List>
 			</Box>
 		</SwipeableDrawer>

@@ -12,6 +12,17 @@ code {
 		monospace;
 }
 
+a {
+	text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+	color: inherit;
+}
+
 .photoGrid {
 	margin: auto;
 }
