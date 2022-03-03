@@ -25,7 +25,7 @@ export const App = () => {
 					'https://i.imgur.com/6kUOwrF.jpg',
 					'https://i.imgur.com/7ZbuWh1.jpg',
 				]}
-				title="Photos"
+				title='Photos'
 			/>
 		</>
 	);

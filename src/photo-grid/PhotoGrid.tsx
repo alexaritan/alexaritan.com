@@ -14,7 +14,7 @@ export const PhotoGrid = ({
 	const shouldRenderMultipleColumns = useMediaQuery(theme.breakpoints.up('sm'));
 	return (
 		<div
-			className="photoGrid"
+			className='photoGrid'
 			style={{ width: shouldRenderMultipleColumns ? 1000 : '100%' }}
 		>
 			<h1>{title}</h1>
@@ -24,7 +24,7 @@ export const PhotoGrid = ({
 			>
 				{imageUrls.map((url, index) => (
 					<ImageListItem
-						className="photo"
+						className='photo'
 						key={`photo${index}`}
 						style={{ overflow: 'hidden' }}
 					>

@@ -7,6 +7,18 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 // import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import CloseIcon from '@mui/icons-material/Close';
+import { IconButton } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+	display: 'flex',
+	alignItems: 'center',
+	padding: theme.spacing(0, 1),
+	// necessary for content to be below app bar
+	...theme.mixins.toolbar,
+	justifyContent: 'flex-start',
+}));
 
 export const NavigationDrawer = ({
 	navIsOpen,
@@ -17,20 +29,25 @@ export const NavigationDrawer = ({
 }) => {
 	return (
 		<SwipeableDrawer
-			anchor="left"
+			anchor='left'
 			open={navIsOpen}
 			onClose={() => setNavOpen(false)}
 			onOpen={() => setNavOpen(true)}
 		>
+			<DrawerHeader>
+				<IconButton edge='end' onClick={() => setNavOpen(false)}>
+					<CloseIcon />
+				</IconButton>
+			</DrawerHeader>
 			<Box
 				sx={{ width: 250 }}
 				onClick={() => setNavOpen(false)}
 				onKeyDown={() => setNavOpen(false)}
-				role="presentation"
+				role='presentation'
 			>
 				<List>
 					<ListItem button>
-						<ListItemText primary="First link" />
+						<ListItemText primary='First link' />
 					</ListItem>
 				</List>
 			</Box>

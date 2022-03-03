@@ -12,12 +12,12 @@ export const NavigationBar = ({
 	return (
 		<Toolbar>
 			<IconButton
-				aria-label="open drawer"
-				color="inherit"
-				edge="start"
+				aria-label='open drawer'
+				color='inherit'
+				edge='start'
 				onClick={setNavOpen}
 			>
-				<MenuIcon fontSize="large" />
+				<MenuIcon fontSize='large' />
 			</IconButton>
 		</Toolbar>
 	);
