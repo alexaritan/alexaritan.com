@@ -1,25 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { App } from './App';
 import './index.css';
-import { PhotoGrid } from './photo-grid/PhotoGrid';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<PhotoGrid
-			imageUrls={[
-				'https://i.imgur.com/MSCTOFy.jpg',
-				'https://i.imgur.com/WJbOiGQ.png',
-				'https://i.imgur.com/6kUOwrF.jpg',
-				'https://i.imgur.com/MSCTOFy.jpg',
-				'https://i.imgur.com/7ZbuWh1.jpg',
-				'https://i.imgur.com/MSCTOFy.jpg',
-				'https://i.imgur.com/WJbOiGQ.png',
-				'https://i.imgur.com/6kUOwrF.jpg',
-				'https://i.imgur.com/7ZbuWh1.jpg',
-			]}
-			title="Photos"
-		/>
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
