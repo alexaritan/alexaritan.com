@@ -8,6 +8,7 @@ import { IconButton } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { albumUrl, parseAlbumFromUrl } from '../utils/urls';
 import { useAlbum } from '../albums/useAlbum';
+import { useKeyPress } from '../utils/hooks/useKeyPress';
 
 export const FullPagePhoto = () => {
 	//Parse out URL contents to prepare navigation.
@@ -36,11 +37,15 @@ export const FullPagePhoto = () => {
 
 	const handleNext = useCallback(() => {
 		if (id < photoUrls.length - 1) setSearchParams({ id: `${id + 1}` });
-	}, [photoUrls, src]);
+	}, [id, photoUrls]);
 
 	const handlePrevious = useCallback(() => {
 		if (id > 0) setSearchParams({ id: `${id - 1}` });
-	}, [photoUrls, src]);
+	}, [id, photoUrls]);
+
+	//Set up the key listeners.
+	useKeyPress({ onKeyPress: handlePrevious, targetKey: 'ArrowLeft' });
+	useKeyPress({ onKeyPress: handleNext, targetKey: 'ArrowRight' });
 
 	return (
 		<Dialog fullScreen open={true}>
