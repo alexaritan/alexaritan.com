@@ -1,7 +1,0 @@
-{
-	"scripts": {
-		"build": "rm -rf public && hugo",
-		"buildDev": "rm -rf public && hugo -D",
-		"start": "hugo server -D"
-	}
-}
