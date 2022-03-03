@@ -7,10 +7,13 @@ import { useTheme } from '@mui/material/styles';
 import { albumUrl, parseAlbumFromUrl } from '../utils/urls';
 
 export const FullPagePhoto = () => {
+	//Parse out URL contents to prepare navigation.
 	const [searchParams] = useSearchParams();
 	const src = searchParams.get('src');
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
+
+	//Get info about the theme.
 	const theme = useTheme();
 	const shouldRenderNavIcons = useMediaQuery(theme.breakpoints.up('sm'));
 
