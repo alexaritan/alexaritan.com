@@ -28,10 +28,6 @@ h2 {
 	margin-left: -4px !important;
 }
 
-/* .photoGrid {
-	margin: 20px auto 0;
-} */
-
 .photo:hover {
 	cursor: pointer;
 	opacity: 0.9;

@@ -18,7 +18,7 @@ export const NavigationBar = ({
 }) => {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar id='navbar' position='sticky'>
+			<AppBar color='transparent' id='navbar' position='sticky'>
 				<Toolbar>
 					<IconButton
 						aria-label='open drawer'
@@ -28,8 +28,8 @@ export const NavigationBar = ({
 					>
 						<MenuIcon fontSize='large' />
 					</IconButton>
-					<Typography component='div' sx={{ flexGrow: 1 }} variant='h6'>
-						My photos
+					<Typography component='div' sx={{ flexGrow: 1 }} variant='h5'>
+						Alex Aritan
 					</Typography>
 					<IconButton
 						aria-label='dark mode toggle'

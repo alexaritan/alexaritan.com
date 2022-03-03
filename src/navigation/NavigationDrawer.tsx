@@ -8,7 +8,7 @@ import ListItem from '@mui/material/ListItem';
 // import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
-import { IconButton } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { albumUrl, homeUrl } from '../utils/urls';
 import { useAlbums } from '../albums/hooks/useAlbums';
@@ -39,7 +39,11 @@ export const NavigationDrawer = ({
 			onOpen={() => setNavOpen(true)}
 		>
 			<DrawerHeader>
-				<Box flexGrow={1}></Box>
+				<Box flexGrow={1}>
+					<Typography component='h5' variant='h5'>
+						Albums
+					</Typography>
+				</Box>
 				<IconButton edge='start' onClick={() => setNavOpen(false)}>
 					<CloseIcon />
 				</IconButton>

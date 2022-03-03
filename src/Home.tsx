@@ -1,6 +1,9 @@
+import { Box } from '@mui/material';
+
 export const Home = () => (
-	<img
-		src='https://alexaritan.com/images/hungary.jpg'
-		style={{ width: '80%' }}
-	/>
+	<Box textAlign='center'>
+		<div>
+			<img src='https://i.imgur.com/UZ3FIxO.jpg' width={'100%'} />
+		</div>
+	</Box>
 );

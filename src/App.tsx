@@ -26,6 +26,7 @@ export const App = () => {
 			}),
 		[isInDarkMode]
 	);
+	const isOnHorizontalScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -37,7 +38,7 @@ export const App = () => {
 				toggleNavigationDrawer={() => setNavOpen(!navIsOpen)}
 			/>
 			<NavigationDrawer navIsOpen={navIsOpen} setNavOpen={setNavOpen} />
-			<Container maxWidth={'lg'} sx={{ mt: 2 }}>
+			<Container maxWidth={isOnHorizontalScreen ? 'lg' : false} sx={{ mt: 2 }}>
 				<Routes>
 					<Route path={homeUrl} element={<Home />} />
 					<Route path={albumUrl()} element={<PhotoGrid />} />
