@@ -38,7 +38,7 @@ export const PhotoGrid = ({
 				rowHeight={shouldRenderMultipleColumns ? 200 : 300}
 			>
 				{imageUrls.map((url, index) => (
-					<Link to={`${photoUrl({ albumName })}?id=${index}`}>
+					<Link to={`${photoUrl({ albumName })}?id=${index}`} key={index}>
 						<ImageListItem
 							className='photo'
 							key={`photo${index}`}

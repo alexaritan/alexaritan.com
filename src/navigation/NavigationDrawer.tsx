@@ -56,8 +56,8 @@ export const NavigationDrawer = ({
 							<ListItemText primary='Home' />
 						</ListItem>
 					</Link>
-					{Object.keys(albums).map(albumName => (
-						<Link to={albumUrl({ albumName })}>
+					{Object.keys(albums).map((albumName, index) => (
+						<Link to={albumUrl({ albumName })} key={index}>
 							<ListItem button>
 								<ListItemText primary={albums[albumName].title} />
 							</ListItem>
