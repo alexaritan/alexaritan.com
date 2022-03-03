@@ -10,6 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { albumUrl, homeUrl } from '../utils/urlBuilders';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
 	display: 'flex',
@@ -47,12 +48,12 @@ export const NavigationDrawer = ({
 				role='presentation'
 			>
 				<List>
-					<Link to='/'>
+					<Link to={homeUrl}>
 						<ListItem button>
 							<ListItemText primary='Home' />
 						</ListItem>
 					</Link>
-					<Link to='/album/example'>
+					<Link to={albumUrl({ albumName: 'example' })}>
 						<ListItem button>
 							<ListItemText primary='Example album' />
 						</ListItem>

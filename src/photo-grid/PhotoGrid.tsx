@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { ScrollToTop } from './ScrollToTop';
 import { KeyboardArrowUp } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { photoUrl } from '../utils/urlBuilders';
 
 export const PhotoGrid = ({
 	imageUrls,
@@ -35,7 +36,7 @@ export const PhotoGrid = ({
 				rowHeight={shouldRenderMultipleColumns ? 200 : 300}
 			>
 				{imageUrls.map((url, index) => (
-					<Link to={`photo?src=${url}`}>
+					<Link to={`${photoUrl({ albumName: 'example' })}?src=${url}`}>
 						<ImageListItem
 							className='photo'
 							key={`photo${index}`}
