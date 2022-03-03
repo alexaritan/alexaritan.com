@@ -7,8 +7,9 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { albumUrl, parseAlbumFromUrl } from '../utils/urls';
-import { useAlbum } from '../albums/useAlbum';
+import { useAlbums } from '../albums/useAlbums';
 import { useKeyPress } from '../utils/hooks/useKeyPress';
+import { Album } from '../albums/constants/albums';
 
 export const FullPagePhoto = () => {
 	//Parse out URL contents to prepare navigation.
@@ -27,7 +28,7 @@ export const FullPagePhoto = () => {
 	const shouldRenderNavIcons = useMediaQuery(theme.breakpoints.up('sm'));
 
 	//Get the photos from the album.
-	const { photoUrls } = useAlbum({ albumName });
+	const { photoUrls } = useAlbums({ albumName }) as Album;
 	const src = photoUrls[id];
 
 	const handleClose = useCallback(

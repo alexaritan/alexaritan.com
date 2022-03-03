@@ -4,7 +4,7 @@ export interface Album {
 	title: string;
 }
 
-interface Albums {
+export interface Albums {
 	[albumName: string]: Album;
 }
 
@@ -22,6 +22,6 @@ export const albums: Albums = {
 			'https://i.imgur.com/7ZbuWh1.jpg',
 		],
 		subtitle: 'Here is an example album',
-		title: 'Photos',
+		title: 'Example album',
 	},
 };
