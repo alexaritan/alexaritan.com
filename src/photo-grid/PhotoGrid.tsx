@@ -22,10 +22,7 @@ export const PhotoGrid = () => {
 	const shouldRenderMultipleColumns = useMediaQuery(theme.breakpoints.up('sm'));
 
 	return (
-		<div
-			className='photoGrid'
-			style={{ width: shouldRenderMultipleColumns ? 1000 : '100%' }}
-		>
+		<div className='photoGrid'>
 			<Typography component='h2' variant='h2'>
 				{title}
 			</Typography>

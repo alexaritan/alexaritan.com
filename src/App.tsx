@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useMediaQuery } from '@mui/material';
+import { Container, useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { NavigationBar } from './navigation/NavigationBar';
@@ -37,11 +37,13 @@ export const App = () => {
 				toggleNavigationDrawer={() => setNavOpen(!navIsOpen)}
 			/>
 			<NavigationDrawer navIsOpen={navIsOpen} setNavOpen={setNavOpen} />
-			<Routes>
-				<Route path={homeUrl} element={<Home />} />
-				<Route path={albumUrl()} element={<PhotoGrid />} />
-				<Route path={photoUrl()} element={<FullPagePhoto />} />
-			</Routes>
+			<Container maxWidth={'lg'} sx={{ mt: 2 }}>
+				<Routes>
+					<Route path={homeUrl} element={<Home />} />
+					<Route path={albumUrl()} element={<PhotoGrid />} />
+					<Route path={photoUrl()} element={<FullPagePhoto />} />
+				</Routes>
+			</Container>
 		</ThemeProvider>
 	);
 };
