@@ -73,6 +73,7 @@ export const FullPagePhoto = () => {
 				<IconButton
 					edge='start'
 					onClick={handlePrevious}
+					size='large'
 					style={{ left: 20, position: 'absolute', top: '47%' }}
 				>
 					<NavigateBeforeIcon />
@@ -82,6 +83,7 @@ export const FullPagePhoto = () => {
 				<IconButton
 					edge='start'
 					onClick={handleNext}
+					size='large'
 					style={{ right: 20, position: 'absolute', top: '47%' }}
 				>
 					<NavigateNextIcon />
