@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { ScrollToTop } from './ScrollToTop';
 import { KeyboardArrowUp } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import { photoUrl } from '../utils/urlBuilders';
+import { photoUrl } from '../utils/urls';
 
 export const PhotoGrid = ({
 	imageUrls,

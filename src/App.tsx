@@ -8,7 +8,7 @@ import { useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { FullPagePhoto } from './photo-grid/FullPagePhoto';
-import { albumUrl, homeUrl, photoUrl } from './utils/urlBuilders';
+import { albumUrl, homeUrl, photoUrl } from './utils/urls';
 
 export const App = () => {
 	const [navIsOpen, setNavOpen] = useState(false);
