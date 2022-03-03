@@ -29,7 +29,7 @@ h2 {
 }
 
 .photoGrid {
-	margin: 20px auto;
+	margin: 20px auto 0;
 }
 
 .photo:hover {

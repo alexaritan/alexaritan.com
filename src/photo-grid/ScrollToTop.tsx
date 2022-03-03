@@ -6,7 +6,7 @@ export const ScrollToTop = ({ children }: { children: React.ReactElement }) => {
 	const trigger = useScrollTrigger({
 		target: window,
 		disableHysteresis: true,
-		threshold: 100,
+		threshold: 300,
 	});
 
 	const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
