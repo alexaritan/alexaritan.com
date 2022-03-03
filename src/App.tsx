@@ -7,6 +7,7 @@ import { Example } from './albums/Example';
 import { useMediaQuery } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { FullPagePhoto } from './photo-grid/FullPagePhoto';
 
 export const App = () => {
 	const [navIsOpen, setNavOpen] = useState(false);
@@ -38,7 +39,8 @@ export const App = () => {
 			<NavigationDrawer navIsOpen={navIsOpen} setNavOpen={setNavOpen} />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='example' element={<Example />} />
+				<Route path='/album/example' element={<Example />} />
+				<Route path='/album/example/photo' element={<FullPagePhoto />} />
 			</Routes>
 		</ThemeProvider>
 	);

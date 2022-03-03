@@ -52,7 +52,7 @@ export const NavigationDrawer = ({
 							<ListItemText primary='Home' />
 						</ListItem>
 					</Link>
-					<Link to='/example'>
+					<Link to='/album/example'>
 						<ListItem button>
 							<ListItemText primary='Example album' />
 						</ListItem>

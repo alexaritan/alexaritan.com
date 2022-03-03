@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import { ScrollToTop } from './ScrollToTop';
 import { KeyboardArrowUp } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 export const PhotoGrid = ({
 	imageUrls,
@@ -17,6 +18,7 @@ export const PhotoGrid = ({
 }) => {
 	const theme = useTheme();
 	const shouldRenderMultipleColumns = useMediaQuery(theme.breakpoints.up('sm'));
+
 	return (
 		<div
 			className='photoGrid'
@@ -33,13 +35,15 @@ export const PhotoGrid = ({
 				rowHeight={shouldRenderMultipleColumns ? 200 : 300}
 			>
 				{imageUrls.map((url, index) => (
-					<ImageListItem
-						className='photo'
-						key={`photo${index}`}
-						style={{ overflow: 'hidden' }}
-					>
-						<img src={url} />
-					</ImageListItem>
+					<Link to={`photo?src=${url}`}>
+						<ImageListItem
+							className='photo'
+							key={`photo${index}`}
+							style={{ overflow: 'hidden' }}
+						>
+							<img src={url} />
+						</ImageListItem>
+					</Link>
 				))}
 			</ImageList>
 			<ScrollToTop>
