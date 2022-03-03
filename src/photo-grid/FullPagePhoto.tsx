@@ -12,7 +12,11 @@ import { useAlbum } from '../albums/useAlbum';
 export const FullPagePhoto = () => {
 	//Parse out URL contents to prepare navigation.
 	const [searchParams, setSearchParams] = useSearchParams();
-	const src = searchParams.get('src');
+	const id =
+		typeof searchParams.get('id') === 'string' &&
+		!isNaN(+searchParams.get('id')!)
+			? +searchParams.get('id')!
+			: -1;
 	const { pathname } = useLocation();
 	const albumName = parseAlbumFromUrl({ path: pathname });
 	const navigate = useNavigate();
@@ -23,6 +27,7 @@ export const FullPagePhoto = () => {
 
 	//Get the photos from the album.
 	const { photoUrls } = useAlbum({ albumName });
+	const src = photoUrls[id];
 
 	const handleClose = useCallback(
 		() => navigate(albumUrl({ albumName })),
@@ -30,14 +35,11 @@ export const FullPagePhoto = () => {
 	);
 
 	const handleNext = useCallback(() => {
-		const index = photoUrls.findIndex(url => url === src);
-		if (index < photoUrls.length - 1)
-			setSearchParams({ src: photoUrls[index + 1] });
+		if (id < photoUrls.length - 1) setSearchParams({ id: `${id + 1}` });
 	}, [photoUrls, src]);
 
 	const handlePrevious = useCallback(() => {
-		const index = photoUrls.findIndex(url => url === src);
-		if (index > 0) setSearchParams({ src: photoUrls[index - 1] });
+		if (id > 0) setSearchParams({ id: `${id - 1}` });
 	}, [photoUrls, src]);
 
 	return (
