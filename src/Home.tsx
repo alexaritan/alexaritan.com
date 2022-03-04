@@ -6,7 +6,13 @@ export const Home = () => (
 		<div>
 			{/* <img src='https://i.imgur.com/UZ3FIxO.jpg' width={'100%'} /> */}
 			<FadeAndSlide
-				words={['Queenstown', 'Budapest', 'Lauterbrunnen', 'Bavaria']}
+				words={[
+					'Queenstown',
+					'Budapest',
+					'Lauterbrunnen',
+					'Bavaria',
+					'Istanbul',
+				]}
 			/>
 		</div>
 	</Box>
