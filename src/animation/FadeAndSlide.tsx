@@ -10,15 +10,17 @@ export const FadeAndSlide = ({ words }: { words: string[] }) => {
 	const boxRef = useRef(null);
 
 	useEffect(() => {
-		setTimeout(
-			() => {
-				if (!fadingIn) {
-					setWordIndex((wordIndex + 1) % words.length);
-				}
-				setFadingIn(!fadingIn);
-			},
-			fadingIn ? 1500 : 200
-		);
+		if (wordIndex < words.length - 1) {
+			setTimeout(
+				() => {
+					if (!fadingIn) {
+						setWordIndex((wordIndex + 1) % words.length);
+					}
+					setFadingIn(!fadingIn);
+				},
+				fadingIn ? 1500 : 200
+			);
+		}
 	}, [fadingIn]);
 
 	return (

@@ -12,6 +12,7 @@ export const Home = () => (
 					'Lauterbrunnen',
 					'Bavaria',
 					'Istanbul',
+					'Where to next?',
 				]}
 			/>
 		</div>
