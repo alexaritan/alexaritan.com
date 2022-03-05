@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+	color: inherit;
+}
+
+/* For some reason the headers have a few pixels of space on their left. Let's fix that. */
+h2 {
+	margin-left: -4px !important;
+}
+
+.photo:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.photo > img {
+	max-width: 100% !important;
+}
