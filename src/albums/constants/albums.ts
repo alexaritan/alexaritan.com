@@ -32,4 +32,17 @@ export const albums: Albums = {
 		subtitle: 'Hungary, Austria, Germany, Switzerland',
 		title: 'European road trip',
 	},
+	newzealand2018: {
+		photoUrls: [
+			'https://i.imgur.com/Fknnwte.jpg',
+			'https://i.imgur.com/qBCYVPL.jpg',
+			'https://i.imgur.com/1BMkTu9.jpg',
+			'https://i.imgur.com/NuZE2vb.jpg',
+			'https://i.imgur.com/3NDCywQ.jpg',
+			'https://i.imgur.com/6cvtiWe.jpg',
+			'https://i.imgur.com/DJww6h8.jpg',
+		],
+		subtitle: 'The south island',
+		title: 'New Zealand',
+	},
 };
