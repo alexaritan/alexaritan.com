@@ -8,20 +8,24 @@ export const FadeAndSlide = ({ words }: { words: string[] }) => {
 	const [wordIndex, setWordIndex] = useState(0);
 	const [fadingIn, setFadingIn] = useState(true);
 	const boxRef = useRef(null);
+	const fadingInRef = useRef(!fadingIn);
 
 	useEffect(() => {
 		if (wordIndex < words.length - 1) {
-			setTimeout(
-				() => {
-					if (!fadingIn) {
-						setWordIndex((wordIndex + 1) % words.length);
-					}
-					setFadingIn(!fadingIn);
-				},
-				fadingIn ? 1500 : 200
-			);
+			if (fadingIn !== fadingInRef.current) {
+				setTimeout(
+					() => {
+						if (!fadingIn) {
+							setWordIndex((wordIndex + 1) % words.length);
+						}
+						setFadingIn(!fadingIn);
+					},
+					fadingIn ? 1500 : 200
+				);
+			}
+			fadingInRef.current = fadingIn;
 		}
-	}, [fadingIn]);
+	}, [fadingIn, fadingInRef, wordIndex, words.length]);
 
 	return (
 		<Box ref={boxRef}>

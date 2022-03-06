@@ -69,6 +69,7 @@ export const FullPagePhoto = () => {
 			) : null}
 			{src ? (
 				<img
+					alt=''
 					src={src}
 					style={{
 						maxHeight: '100%',

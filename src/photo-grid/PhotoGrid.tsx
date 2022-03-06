@@ -40,7 +40,7 @@ export const PhotoGrid = () => {
 							key={`photo${index}`}
 							style={{ overflow: 'hidden' }}
 						>
-							<img src={url} />
+							<img alt='' src={url} />
 						</ImageListItem>
 					</Link>
 				))}
