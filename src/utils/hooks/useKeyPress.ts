@@ -35,7 +35,7 @@ export const useKeyPress = ({
 			window.removeEventListener('keydown', handleKeyDown);
 			window.removeEventListener('keyup', handleKeyUp);
 		};
-	}, []);
+	}, [handleKeyDown, handleKeyUp]);
 
 	useEffect(() => {
 		if (!keyRef.current && keyIsPressed) {

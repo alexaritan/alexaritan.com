@@ -33,16 +33,16 @@ export const FullPagePhoto = () => {
 
 	const handleClose = useCallback(
 		() => navigate(albumUrl({ albumName })),
-		[navigate]
+		[albumName, navigate]
 	);
 
 	const handleNext = useCallback(() => {
 		if (id < photoUrls.length - 1) setSearchParams({ id: `${id + 1}` });
-	}, [id, photoUrls]);
+	}, [id, photoUrls, setSearchParams]);
 
 	const handlePrevious = useCallback(() => {
 		if (id > 0) setSearchParams({ id: `${id - 1}` });
-	}, [id, photoUrls]);
+	}, [id, setSearchParams]);
 
 	//Set up the key listeners.
 	useKeyPress({ onKeyPress: handlePrevious, targetKey: 'ArrowLeft' });
