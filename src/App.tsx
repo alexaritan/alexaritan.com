@@ -6,7 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { NavigationBar } from './navigation/NavigationBar';
 import { NavigationDrawer } from './navigation/NavigationDrawer';
 import { Home } from './pages/components/Home';
-import { PhotoGrid } from './photo-grid/PhotoGrid';
 import { FullPagePhoto } from './pages/components/FullPagePhoto';
 import { albumUrl, homeUrl, photoUrl } from './utils/urls';
 import { Gallery } from './pages/components/Gallery';
