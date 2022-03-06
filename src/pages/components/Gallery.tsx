@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { PhotoGrid } from '../../photo-grid/PhotoGrid';
+import { PhotoGrid } from '@alexaritan/photo-gallery';
 import { albums } from '../../albums/constants/albums';
 import { photoUrl } from '../../utils/urls';
 

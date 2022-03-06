@@ -1,8 +1,8 @@
+import { useEffect, useRef, useState } from 'react';
 import { Typography } from '@mui/material';
 import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
 import { Box } from '@mui/system';
-import { useEffect, useRef, useState } from 'react';
 
 export const FadeAndSlide = ({ words }: { words: string[] }) => {
 	const [wordIndex, setWordIndex] = useState(0);
