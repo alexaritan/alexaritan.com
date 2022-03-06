@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { FullPagePhoto as Photo } from '../../photo-grid/FullPagePhoto';
+import { FullPagePhoto as Photo } from '@alexaritan/photo-gallery';
 import { albumUrl } from '../../utils/urls';
 import { albums } from '../../albums/constants/albums';
 
