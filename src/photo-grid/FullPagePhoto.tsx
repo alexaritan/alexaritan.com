@@ -1,48 +1,26 @@
 import { Dialog, useMediaQuery } from '@mui/material';
-import { useCallback } from 'react';
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useSwipeable } from 'react-swipeable';
-import { albumUrl } from '../utils/urls';
-import { useAlbums } from '../albums/hooks/useAlbums';
 import { useKeyPress } from '../utils/hooks/useKeyPress';
-import { Album } from '../albums/constants/albums';
 
-export const FullPagePhoto = () => {
-	//Parse out URL contents to prepare navigation.
-	const { albumName } = useParams();
-	const [searchParams, setSearchParams] = useSearchParams();
-	const id =
-		typeof searchParams.get('id') === 'string' &&
-		!isNaN(+searchParams.get('id')!)
-			? +searchParams.get('id')!
-			: -1;
-	const navigate = useNavigate();
-
+export const FullPagePhoto = ({
+	handleClose,
+	handleNext,
+	handlePrevious,
+	src,
+}: {
+	handleClose: () => void;
+	handleNext: () => void;
+	handlePrevious: () => void;
+	src: string;
+}) => {
 	//Get info about the theme.
 	const theme = useTheme();
 	const shouldRenderNavIcons = useMediaQuery(theme.breakpoints.up('sm'));
-
-	//Get the photos from the album.
-	const { photoUrls } = useAlbums({ albumName }) as Album;
-	const src = photoUrls[id];
-
-	const handleClose = useCallback(
-		() => navigate(albumUrl({ albumName })),
-		[albumName, navigate]
-	);
-
-	const handleNext = useCallback(() => {
-		if (id < photoUrls.length - 1) setSearchParams({ id: `${id + 1}` });
-	}, [id, photoUrls, setSearchParams]);
-
-	const handlePrevious = useCallback(() => {
-		if (id > 0) setSearchParams({ id: `${id - 1}` });
-	}, [id, setSearchParams]);
 
 	//Set up the key listeners.
 	useKeyPress({ onKeyPress: handlePrevious, targetKey: 'ArrowLeft' });

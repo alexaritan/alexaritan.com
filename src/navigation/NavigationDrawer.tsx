@@ -11,8 +11,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { IconButton, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { albumUrl, homeUrl } from '../utils/urls';
-import { useAlbums } from '../albums/hooks/useAlbums';
-import { Albums } from '../albums/constants/albums';
+import { albums } from '../albums/constants/albums';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
 	display: 'flex',
@@ -30,7 +29,6 @@ export const NavigationDrawer = ({
 	navIsOpen: boolean;
 	setNavOpen: (open: boolean) => void;
 }) => {
-	const albums = useAlbums() as Albums;
 	return (
 		<SwipeableDrawer
 			anchor='left'
