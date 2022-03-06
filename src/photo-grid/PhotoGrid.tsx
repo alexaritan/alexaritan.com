@@ -1,23 +1,23 @@
 import { Fab, ImageListItem } from '@mui/material';
-import { useParams } from 'react-router-dom';
 import ImageList from '@mui/material/ImageList';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import { ScrollToTop } from './ScrollToTop';
 import { KeyboardArrowUp } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
-import { photoUrl } from '../utils/urls';
-import { useAlbums } from '../albums/hooks/useAlbums';
-import { Album as AlbumType } from '../albums/constants/albums';
+import { Album } from '../albums/constants/albums';
 
-export const PhotoGrid = () => {
-	const { albumName } = useParams();
-	const {
-		photoUrls: imageUrls,
-		subtitle,
-		title,
-	} = useAlbums({ albumName }) as AlbumType;
+export const PhotoGrid = ({
+	imgUrls,
+	onClick,
+	title,
+	subtitle,
+}: {
+	imgUrls: string[];
+	onClick: (id: number) => void;
+	title: string;
+	subtitle: string;
+}) => {
 	const theme = useTheme();
 	const shouldRenderMultipleColumns = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -33,16 +33,14 @@ export const PhotoGrid = () => {
 				cols={shouldRenderMultipleColumns ? 3 : 1}
 				rowHeight={shouldRenderMultipleColumns ? 250 : 300}
 			>
-				{imageUrls.map((url, index) => (
-					<Link to={`${photoUrl({ albumName })}?id=${index}`} key={index}>
-						<ImageListItem
-							className='photo'
-							key={`photo${index}`}
-							style={{ overflow: 'hidden' }}
-						>
-							<img alt='' src={url} />
-						</ImageListItem>
-					</Link>
+				{imgUrls.map((url, index) => (
+					<ImageListItem
+						className='photo'
+						key={`photo${index}`}
+						style={{ overflow: 'hidden' }}
+					>
+						<img alt='' onClick={() => onClick(index)} src={url} />
+					</ImageListItem>
 				))}
 			</ImageList>
 			<ScrollToTop>
