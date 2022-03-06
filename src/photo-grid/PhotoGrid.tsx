@@ -5,7 +5,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import { ScrollToTop } from './ScrollToTop';
 import { KeyboardArrowUp } from '@mui/icons-material';
-import { Album } from '../albums/constants/albums';
 
 export const PhotoGrid = ({
 	imgUrls,
