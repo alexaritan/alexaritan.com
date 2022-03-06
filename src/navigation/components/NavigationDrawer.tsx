@@ -10,8 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { albumUrl, homeUrl } from '../utils/urls';
-import { albums } from '../albums/constants/albums';
+import { albumUrl, homeUrl } from '../../utils/urls';
+import { albums } from '../../albums/constants/albums';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
 	display: 'flex',
