@@ -9,6 +9,17 @@ export interface Albums {
 }
 
 export const albums: Albums = {
+	iceland2020: {
+		photoUrls: [
+			'https://i.imgur.com/OGPWwNq.jpg',
+			'https://i.imgur.com/MVfhd9v.jpg',
+			'https://i.imgur.com/cw7eTQu.jpg',
+			'https://i.imgur.com/NoOfGp2.jpg',
+			'https://i.imgur.com/N7r6npN.jpg',
+		],
+		subtitle: '',
+		title: 'Iceland',
+	},
 	europe2019: {
 		photoUrls: [
 			'https://i.imgur.com/cYNpi7h.jpg',
