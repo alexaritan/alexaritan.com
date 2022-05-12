@@ -9,7 +9,7 @@ export interface Albums {
 }
 
 export const albums: Albums = {
-	iceland2020: {
+	iceland2022: {
 		photoUrls: [
 			'https://i.imgur.com/OGPWwNq.jpg',
 			'https://i.imgur.com/MVfhd9v.jpg',
@@ -17,7 +17,7 @@ export const albums: Albums = {
 			'https://i.imgur.com/NoOfGp2.jpg',
 			'https://i.imgur.com/N7r6npN.jpg',
 		],
-		subtitle: '',
+		subtitle: 'Reykjavík, Snæfellsnes, and  Sólheimajökull',
 		title: 'Iceland',
 	},
 	europe2019: {
