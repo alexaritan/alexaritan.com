@@ -9,6 +9,17 @@ export interface Albums {
 }
 
 export const albums: Albums = {
+	norway2022: {
+		photoUrls: [
+			'https://i2.lensdump.com/i/tU6Lqo.jpg',
+			'https://i3.lensdump.com/i/tU6o22.jpg',
+			'https://i.lensdump.com/i/tUkcLH.jpg',
+			'https://i.lensdump.com/i/tU68io.jpg',
+			'https://i.lensdump.com/i/tU6VwA.jpg',
+		],
+		subtitle: 'Reinebringen, Ryten, and Å',
+		title: 'Lofoten',
+	},
 	iceland2022: {
 		photoUrls: [
 			'https://i.imgur.com/OGPWwNq.jpg',
