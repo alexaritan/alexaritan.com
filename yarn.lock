@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alexaritan/photo-gallery@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@alexaritan/photo-gallery/-/photo-gallery-0.0.5.tgz#fc0d604e592df13c096452488239ecab83b9014c"
-  integrity sha512-Xgmth/AmA4CZKvhCQJhiiROA5/Qiudda69HC+WfLaJbuRZG8qzbuAUzJdPLtilu0jsb1rl1uBUCQzNArM3b8ag==
+"@alexaritan/photo-gallery@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@alexaritan/photo-gallery/-/photo-gallery-0.0.9.tgz#b37afc13482211de020afcc4971ad373959d8bc1"
+  integrity sha512-DdOtl6yfvniGVsWsn8ohNbkrAW+I/qINiMhaXHw1Pcb0/bJ0lpkMm77ow71EUulVydq4t+zlDe+gEu/PpgenEA==
   dependencies:
     "@mui/icons-material" "^5.4.4"
     "@mui/material" "^5.4.4"
