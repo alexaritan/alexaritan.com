@@ -35,6 +35,7 @@ export const FullPagePhoto = () => {
 			handleClose={handleClose}
 			handleNext={handleNext}
 			handlePrevious={handlePrevious}
+			fullScreen={false}
 			src={src}
 		/>
 	);
