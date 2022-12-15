@@ -8,6 +8,7 @@ export const Home = () => (
 			<FadeAndSlide
 				words={[
 					'Queenstown',
+					'Å',
 					'Snæfellsnes',
 					'Budapest',
 					'Lauterbrunnen',
