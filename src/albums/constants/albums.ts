@@ -2,6 +2,7 @@ export interface Album {
 	photoUrls: string[];
 	subtitle: string;
 	title: string;
+	year: number;
 }
 
 export interface Albums {
@@ -9,6 +10,16 @@ export interface Albums {
 }
 
 export const albums: Albums = {
+	newzealand2022: {
+		photoUrls: [
+			'https://i1.lensdump.com/i/R59B9k.jpeg',
+			'https://i2.lensdump.com/i/R59qWe.jpeg',
+			'https://i3.lensdump.com/i/R599Da.jpeg',
+		],
+		subtitle: 'Return to the south island',
+		title: 'New Zealand',
+		year: 2022,
+	},
 	norway2022: {
 		photoUrls: [
 			'https://i2.lensdump.com/i/tU6Lqo.jpg',
@@ -19,6 +30,7 @@ export const albums: Albums = {
 		],
 		subtitle: 'Reinebringen, Ryten, and Å',
 		title: 'Lofoten',
+		year: 2022,
 	},
 	iceland2022: {
 		photoUrls: [
@@ -30,6 +42,7 @@ export const albums: Albums = {
 		],
 		subtitle: 'Reykjavík, Snæfellsnes, and  Sólheimajökull',
 		title: 'Iceland',
+		year: 2022,
 	},
 	europe2019: {
 		photoUrls: [
@@ -53,6 +66,7 @@ export const albums: Albums = {
 		],
 		subtitle: 'Hungary, Austria, Germany, Switzerland',
 		title: 'European road trip',
+		year: 2019,
 	},
 	newzealand2018: {
 		photoUrls: [
@@ -66,5 +80,6 @@ export const albums: Albums = {
 		],
 		subtitle: 'The south island',
 		title: 'New Zealand',
+		year: 2018,
 	},
 };

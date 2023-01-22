@@ -12,6 +12,7 @@ import { IconButton, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { albumUrl, homeUrl } from '../../utils/urls';
 import { albums } from '../../albums/constants/albums';
+import Divider from '@mui/material/Divider';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
 	display: 'flex',
@@ -29,6 +30,7 @@ export const NavigationDrawer = ({
 	navIsOpen: boolean;
 	setNavOpen: (open: boolean) => void;
 }) => {
+	let year: number;
 	return (
 		<SwipeableDrawer
 			anchor='left'
@@ -58,13 +60,20 @@ export const NavigationDrawer = ({
 							<ListItemText primary='Home' />
 						</ListItem>
 					</Link>
-					{Object.keys(albums).map((albumName, index) => (
-						<Link to={albumUrl({ albumName })} key={index}>
-							<ListItem button>
-								<ListItemText primary={albums[albumName].title} />
-							</ListItem>
-						</Link>
-					))}
+					{Object.keys(albums).map((albumName, index) => {
+						const hasYearChanged = year !== albums[albumName].year;
+						year = albums[albumName].year;
+						return (
+							<>
+								{hasYearChanged && <Divider textAlign='right'>{year}</Divider>}
+								<Link to={albumUrl({ albumName })} key={index}>
+									<ListItem button>
+										<ListItemText primary={albums[albumName].title} />
+									</ListItem>
+								</Link>
+							</>
+						);
+					})}
 				</List>
 			</Box>
 		</SwipeableDrawer>

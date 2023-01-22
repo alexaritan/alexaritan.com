@@ -7,8 +7,8 @@ export const Home = () => (
 			{/* <img src='https://i.imgur.com/UZ3FIxO.jpg' width={'100%'} /> */}
 			<FadeAndSlide
 				words={[
-					'Queenstown',
 					'Å',
+					'Queenstown',
 					'Snæfellsnes',
 					'Budapest',
 					'Lauterbrunnen',
